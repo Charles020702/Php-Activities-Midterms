@@ -43,11 +43,9 @@
             <select name="sizeSelect" id="sizeSelect">
 
                 <?php
-                    if (isset($arrSize)) {
                         foreach ($arrSize as $keySize => $valueSize) {
                             echo "<option value='". $valueSize."'>". $keySize ."</option>";
                         }
-                     }
                 ?>
             </select>
 
