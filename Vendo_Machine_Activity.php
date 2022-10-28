@@ -99,11 +99,16 @@
                     </ul>";
                 }
                     $itemTotal = ($quantity * sizeof($process));
-                    $grandTotal = (array_sum($process) + $addon * $quantity) * $quantity;
-
+                    if(sizeof($process) == 1){
+                    $grandTotal = (array_sum($process) + $addon) * $quantity;
                     echo "<label><b>Total number of items:</b> </label>". $itemTotal ."<br>";
                     echo "<label><b>Total number amount:</b> </label>". $grandTotal;
-
+                    }
+                    else{
+                    $grandTotal = (array_sum($process) + $addon * $quantity) * $quantity;
+                    echo "<label><b>Total number of items:</b> </label>". $itemTotal ."<br>";
+                    echo "<label><b>Total number amount:</b> </label>". $grandTotal;
+                    }
                    
             }
             else{
