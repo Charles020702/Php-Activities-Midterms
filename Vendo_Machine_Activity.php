@@ -25,12 +25,12 @@
             <legend>Products:</legend>
 
             <?php
-                if(isset($arrDrinks)){
+               
                     foreach ($arrDrinks as $keyDrinks => $valueDrinks) {
                         echo "<input type='checkbox' name='chkBeverage[". $keyDrinks ."]' value='". $valueDrinks ."'>
                         <label>". $keyDrinks. " - ₱". $valueDrinks."</label><br>";
                     }
-                }
+                
             ?>
 
         </fieldset>
